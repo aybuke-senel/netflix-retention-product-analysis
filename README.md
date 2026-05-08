@@ -4,37 +4,18 @@
 
 This project analyzes Netflix user behavior to understand engagement, retention, and churn patterns using real user activity data.
 
-The main objective is to identify why users stop using the platform, detect early churn signals, and generate product recommendations that can improve user retention and engagement.
+The project focuses on identifying early churn signals, analyzing user engagement, and generating product recommendations based on behavioral insights.
 
-The project follows a product analytics approach by transforming raw behavioral data into business insights through SQL, PostgreSQL, Python, and data visualization techniques.
-
-Key areas covered in the project:
+Using SQL, PostgreSQL, Python, and data visualization techniques, the analysis covers:
 
 - User engagement analysis
 - Churn analysis
 - Retention and cohort analysis
 - User segmentation
 - Behavioral pattern analysis
-- Product recommendations based on data insights
+- Product recommendations
 
-Rather than focusing only on dashboards or machine learning models, this project emphasizes data-driven product decision making and user behavior understanding.
-
-## Business Problem
-
-Streaming platforms heavily rely on user retention and long-term engagement. Understanding why users become inactive or leave the platform is critical for improving user experience and reducing churn.
-
-This project focuses on analyzing user behavior patterns to identify the factors that influence engagement and retention. By examining viewing activity, search behavior, session frequency, and user interactions, the project aims to detect early churn signals and understand which behaviors are associated with highly engaged users.
-
-The main business questions addressed in this project are:
-
-- Why do some users stop using the platform?
-- Which user behaviors are linked to higher retention?
-- What are the early indicators of churn risk?
-- How can product decisions improve user engagement and retention?
-
-The insights generated from this analysis can help support data-driven product strategies such as personalized recommendations, onboarding improvements, and user re-engagement mechanisms.
-
-## Dataset
+The project follows a product analytics approach by transforming raw user activity data into actionable business insights.
 
 ## Dataset
 
@@ -42,28 +23,15 @@ This project uses the [Netflix Watch Log](https://www.kaggle.com/datasets/arjuna
 
 The dataset contains multiple CSV files related to Netflix user activity and platform interactions. These files were imported into PostgreSQL and analyzed using SQL and Python workflows.
 
-### Included Data Files
-
-- **Viewing Activity**
-  - User watch history and viewing timestamps
-
-- **Clickstream Data**
-  - User interaction and navigation activity
-
-- **Search History**
-  - Search queries and search behavior patterns
-
-- **Profiles**
-  - User profile-related information
-
-- **Devices**
-  - Device usage and interaction data
-
-The datasets were combined to analyze user engagement, retention behavior, churn patterns, and overall platform activity.
+- **Viewing Activity** — User watch history and timestamps
+- **Clickstream Data** — Navigation and interaction activity
+- **Search History** — User search behavior
+- **Profiles** — Profile-level information
+- **Devices** — Device usage data
 
 ## Tech Stack
 
-### Database & Querying
+### Database 
 - PostgreSQL
 - SQL
 - DBeaver
@@ -88,7 +56,7 @@ The datasets were combined to analyze user engagement, retention behavior, churn
 - User Segmentation
 - Behavioral Analytics
 
-## Data Pipeline / Workflow
+## Workflow
 
 ```text
 Raw CSV Files
@@ -104,3 +72,59 @@ EDA & Behavioral Analysis
 Retention / Churn Insights
     ↓
 Product Recommendations
+```
+
+## Retention & Cohort Analysis
+
+Retention and cohort analysis were performed to understand how user activity changes over time and how frequently users return to the platform.
+
+The analysis focused on:
+
+- Daily Active Users (DAU)
+- User retention trends
+- Cohort-based retention patterns
+- Returning user behavior
+- Churn-related activity decline
+
+Cohort heatmaps and retention metrics were used to identify engagement drop-offs and long-term user activity patterns.
+
+### Retention Cohort Heatmap
+![Retention Heatmap](images/retention_cohort_heatmap.png)
+
+### Daily Active Users (DAU)
+![Daily Active Users](images/daily_active_users.png)
+
+## User Segmentation
+
+Users were segmented based on engagement and activity behavior to better understand different user groups on the platform.
+
+The segmentation focused on:
+
+- High engagement users
+- Medium engagement users
+- Low engagement users
+- Active vs inactive users
+- Churn-risk user groups
+
+Behavioral metrics such as watch frequency, activity level, and session patterns were used to identify engagement differences between users.
+
+## Key Insights
+
+- Users with lower engagement levels showed higher churn risk.
+- Retention rates declined significantly after initial user activity periods.
+- Highly active users demonstrated more consistent return behavior.
+- Search and navigation activity were positively associated with engagement.
+- Activity frequency and recent inactivity were strong indicators of churn behavior.
+- Cohort analysis revealed noticeable engagement drop-offs over time.
+
+## Product Recommendations
+
+Based on the behavioral analysis and retention insights, several product improvement ideas were identified:
+
+- Improve personalized content recommendations for low-engagement users
+- Enhance onboarding experience to increase early user activity
+- Introduce re-engagement notifications for inactive users
+- Optimize content discovery and search experience
+- Monitor early churn indicators to support retention strategies
+
+These recommendations aim to improve user engagement, increase retention, and reduce churn risk.
